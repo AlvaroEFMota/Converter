@@ -1,0 +1,23 @@
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 400px;
+    background-color: rgb(221, 218, 218);
+    border-style: solid;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 10%;
+}
+
+input {
+    border-radius: 5px;
+    border: 0px;
+}

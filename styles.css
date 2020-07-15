@@ -2,6 +2,7 @@
 body {
     display: flex;
     justify-content: center;
+    font-family: monospace;
 }
 
 .conteiner {
@@ -20,4 +21,14 @@ body {
 input {
     border-radius: 5px;
     border: 0px;
+}
+
+.converter {
+    border-style: solid;
+    border-color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-width: 1px;
+    border-radius: 5px;
+    padding: 0px 7px 0px 7px;
 }

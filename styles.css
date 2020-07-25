@@ -31,3 +31,13 @@ input {
     font-size: small;
     left: 30%;
 }
+
+.info-conversion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    max-width: 1000px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 30%;
+}

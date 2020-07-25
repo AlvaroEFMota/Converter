@@ -1,13 +1,11 @@
 function BinaryToDecimal() {
     var binary = document.getElementById("binary").value;
-        //console.log(binary);
     if (binary != ""){
         if(ValidateBinary(binary)) {
             var decimal = parseInt(binary,2);
             document.getElementById("decimal").value = decimal;
             HideError("binary-msg");
         } else {
-            console.log("erro");
             ShowError("binary-msg");
         }
     } else{
@@ -17,7 +15,7 @@ function BinaryToDecimal() {
 }
 
 function DecimalToBinary() {
-    var pilha = [];
+    var stack = [];
     var decimal = document.getElementById("decimal").value;
     var binary = "";
     if(decimal != ""){
@@ -25,15 +23,15 @@ function DecimalToBinary() {
             HideError("decimal-msg");
             decimal = parseInt(decimal)
             if (decimal === 0){
-                pilha.push(parseInt(0));
+                stack.push(parseInt(0));
             }
             while(decimal > 0) {
-                pilha.push(decimal%2);
+                stack.push(decimal%2);
                 decimal = parseInt(decimal/2);
             }
-            binary = pilha.pop().toString();
-            while(pilha.length > 0) {
-                binary = binary.concat(pilha.pop().toString());       
+            binary = stack.pop().toString();
+            while(stack.length > 0) {
+                binary = binary.concat(stack.pop().toString());       
             }
             document.getElementById("binary").value = binary;
         } else {
